@@ -3,7 +3,11 @@ window.onload = function() {
     ws.onopen    = function(e) { console.log('OPEN'); };
     ws.onclose   = function(e) { console.log('CLOSE'); };
     ws.onerror   = function(e) { console.log('ERROR'); };
-    ws.onmessage = function(e) { console.log('MESSAGE'); };
+    ws.onmessage = function(e) {
+        var chatlog = document.getElementById('chatlog');
+        chatlog.value += e.data + '\n';
+        chatlog.scrollTop = chatlog.scrollHeight;
+    };
 
     function send(message) {
         ws.send(message);
