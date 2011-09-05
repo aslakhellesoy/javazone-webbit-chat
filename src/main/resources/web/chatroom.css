@@ -1,0 +1,12 @@
+body {
+    font-family: arial, sans-serif;
+    padding: 10px;
+}
+
+#chatlog, #entry {
+    width: 100%;
+    border: solid 4px #000000;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+}
